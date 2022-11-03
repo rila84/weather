@@ -10,17 +10,17 @@
   font-size: 45px;
   font-weight: 600;
   color: #313939;
-  padding-left: 80px;
+  padding-left: 130px;
 }
 #forcast {
   margin-bottom: 110px;
 }
 
 .container {
-  width: 65%;
+  width: 51%;
   height: 550px;
   margin: 50px auto;
-  padding: 50px;
+  padding: 50px 40px;
   border: 1px solid gainsboro;
   border-radius: 5px;
   font-family: "Familjen Grotesk", sans-serif;
@@ -49,4 +49,11 @@ small {
   line-height: 1;
   position: relative;
   top: -12px;
+}
+a {
+  text-decoration: none;
+  color: #68e1fd;
+}
+p {
+  font-size: 14px;
 }
