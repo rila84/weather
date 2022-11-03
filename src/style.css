@@ -1,0 +1,52 @@
+#current-city {
+  font-size: 40px;
+  font-weight: 600;
+  color: #313939;
+}
+#search-form {
+  margin-bottom: 40px;
+}
+#current-temperature {
+  font-size: 45px;
+  font-weight: 600;
+  color: #313939;
+  padding-left: 80px;
+}
+#forcast {
+  margin-bottom: 110px;
+}
+
+.container {
+  width: 65%;
+  height: 550px;
+  margin: 50px auto;
+  padding: 50px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  font-family: "Familjen Grotesk", sans-serif;
+}
+.col-9 input {
+  background-color: #68e1fd;
+}
+.search-btn {
+  background-color: #231f20;
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 20px;
+  width: 100px;
+}
+
+ul {
+  padding: 0 0 40px 0;
+}
+li {
+  list-style: none;
+  color: #475959;
+}
+small {
+  font-size: 25px;
+  line-height: 1;
+  position: relative;
+  top: -12px;
+}
