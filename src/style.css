@@ -15,6 +15,13 @@
 #forcast {
   margin-bottom: 110px;
 }
+#humidity,
+#wind-speed {
+  color: #ffbc0e;
+}
+#description {
+  font-style: italic;
+}
 
 .container {
   width: 51%;
@@ -25,6 +32,7 @@
   border-radius: 5px;
   font-family: "Familjen Grotesk", sans-serif;
 }
+
 .col-9 input {
   background-color: #68e1fd;
 }
@@ -35,6 +43,9 @@
   border-radius: 5px;
   padding: 7px 20px;
   width: 100px;
+}
+.parameter {
+  color: #ffbc0e;
 }
 
 ul {
@@ -52,7 +63,7 @@ small {
 }
 a {
   text-decoration: none;
-  color: #68e1fd;
+  color: #ffbc0e;
 }
 p {
   font-size: 14px;
