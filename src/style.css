@@ -11,34 +11,35 @@
   margin-top: -10px;
 }
 #current-temperature {
-  font-size: 45px;
+  font-size: 50px;
   font-weight: 600;
   color: #313939;
   line-height: 0.7;
   margin-left: 0px;
 }
 
-#forcast {
-  margin-bottom: 110px;
-}
 #humidity,
 #wind-speed {
   color: #ffbc0e;
 }
+
 #description {
   font-style: italic;
+  color: #475959;
 }
 
 .container {
-  width: 51%;
-  height: 550px;
+  width: 45%;
+  height: 350px;
   margin: 50px auto;
   padding: 50px 40px;
   border: 1px solid gainsboro;
   border-radius: 5px;
   font-family: "Familjen Grotesk", sans-serif;
 }
-
+.col-6 {
+  line-height: 1.5;
+}
 .col-9 input {
   background-color: #68e1fd;
 }
@@ -53,6 +54,24 @@
 .parameter {
   color: #ffbc0e;
 }
+.footer-link {
+  text-decoration: none;
+  color: #ffbc0e;
+}
+.units a {
+  font-size: 18px;
+  line-height: 1;
+  position: relative;
+  top: -20px;
+  text-decoration: none;
+}
+.units span {
+  color: #475959;
+}
+.col-6 .active {
+  cursor: default;
+  color: #475959;
+}
 
 ul {
   padding: 0 0 40px 0;
@@ -60,16 +79,6 @@ ul {
 li {
   list-style: none;
   color: #475959;
-}
-small {
-  font-size: 25px;
-  line-height: 1;
-  position: relative;
-  top: -12px;
-}
-a {
-  text-decoration: none;
-  color: #ffbc0e;
 }
 p {
   font-size: 14px;

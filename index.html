@@ -29,6 +29,7 @@
                 type="search"
                 placeholder=" type a city..."
                 id="search-input"
+                autocomplete="off"
               />
             </div>
             <div class="col-3">
@@ -44,10 +45,11 @@
             <div class="col-6">
               <h1 id="current-city"></h1>
               <ul>
-                <li id="date">Monday 12:40, <span id="explanation"></span></li>
+                <li id="date"></li>
+                <span id="description"></span>
                 <li>
                   humidity: <span id="humidity"></span
-                  ><span class="parameter">%</span>, wind
+                  ><span class="parameter">%</span>, wind:
                   <span id="wind-speed"></span>
                   <span class="parameter">km/h</span>
                 </li>
@@ -55,42 +57,26 @@
             </div>
             <div class="col-6" id="temp-icon">
               <img src="" id="icon" />
-              <span id="current-temperature"></span><small>°C</small>
+              <span id="current-temperature"></span>
+              <span class="units">
+                <a href="#" id="celsius" class="active"
+                  >°C<span id="units-divider"> | </span>
+                </a>
+                <a href="#" id="fahrenheit">°F</a>
+              </span>
             </div>
-          </div>
-        </div>
-        <div class="row" id="forcast">
-          <div class="col">
-            <span class="card-title">mon</span>
-            <img src="#" alt="" />
-            <p>11° 10°</p>
-          </div>
-          <div class="col">
-            <span class="card-title">mon</span>
-            <img src="#" alt="" />
-            <p>11° 10°</p>
-          </div>
-          <div class="col">
-            <span class="card-title">mon</span>
-            <img src="#" alt="" />
-            <p>11° 10°</p>
-          </div>
-          <div class="col">
-            <span class="card-title">mon</span>
-            <img src="#" alt="" />
-            <p>11° 10°</p>
-          </div>
-          <div class="col">
-            <span class="card-title">mon</span>
-            <img src="#" alt="" />
-            <p>11° 10°</p>
           </div>
         </div>
         <p>
           This project was coded by rila and is
-          <a href="https://github.com/rila84/weather">open-sourced on GitHub</a>
+          <a href="https://github.com/rila84/weather" class="footer-link"
+            >open-sourced on GitHub</a
+          >
           and
-          <a href="https://effervescent-sunburst-b302c3.netlify.app/">
+          <a
+            href="https://effervescent-sunburst-b302c3.netlify.app/"
+            class="footer-link"
+          >
             hosted on Netlify</a
           >
         </p>
