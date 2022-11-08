@@ -1,7 +1,7 @@
 #current-city {
   font-size: 40px;
   font-weight: 600;
-  color: #313939;
+  color: whitesmoke;
 }
 #search-form {
   margin-bottom: 40px;
@@ -13,7 +13,7 @@
 #current-temperature {
   font-size: 50px;
   font-weight: 600;
-  color: #313939;
+  color: whitesmoke;
   line-height: 0.7;
   margin-left: 0px;
 }
@@ -22,20 +22,28 @@
 #wind-speed {
   color: #ffbc0e;
 }
+#date {
+  display: inline;
+}
 
 #description {
   font-style: italic;
-  color: #475959;
+  color: whitesmoke;
+  display: block;
+}
+#forcast-icon {
+  display: block;
 }
 
 .container {
   width: 45%;
-  height: 350px;
+  height: 500px;
   margin: 50px auto;
   padding: 50px 40px;
   border: 1px solid gainsboro;
   border-radius: 5px;
   font-family: "Familjen Grotesk", sans-serif;
+  background-color: rgb(37, 37, 98);
 }
 .col-6 {
   line-height: 1.5;
@@ -44,33 +52,39 @@
   background-color: #68e1fd;
 }
 .search-btn {
-  background-color: #231f20;
-  color: whitesmoke;
+  background-color: #ffbc0e;
+  color: #252562;
   border: none;
   border-radius: 5px;
   padding: 7px 20px;
-  width: 100px;
+  width: 110px;
+  font-weight: 600;
+  font-size: 18px;
 }
+
 .parameter {
-  color: #ffbc0e;
+  color: rgb(250, 246, 246);
 }
-.footer-link {
-  text-decoration: none;
-  color: #ffbc0e;
-}
-.units a {
+.units {
   font-size: 18px;
   line-height: 1;
   position: relative;
   top: -20px;
+  color: #68e1fd;
+}
+.footer {
+  font-size: 14px;
+  color: whitesmoke;
+  padding-top: 25px;
+  position: fixed;
+}
+.footer-link {
   text-decoration: none;
+  color: #68e1fd;
 }
-.units span {
-  color: #475959;
-}
-.col-6 .active {
-  cursor: default;
-  color: #475959;
+.col-2 {
+  color: whitesmoke;
+  padding-bottom: 20px;
 }
 
 ul {
@@ -78,8 +92,8 @@ ul {
 }
 li {
   list-style: none;
-  color: #475959;
+  color: whitesmoke;
 }
-p {
-  font-size: 14px;
+ul span {
+  color: whitesmoke;
 }

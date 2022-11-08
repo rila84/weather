@@ -20,6 +20,13 @@ function date(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}: ${minutes}`;
 }
+function displayForcast() {
+  document.querySelector("#forcast");
+  forcast.innerHTML = "forcast;";
+
+  let day = ["Wed", "Thur", "Fri", "Sat", "Sun", "Mon"];
+  day.forEach(function () {});
+}
 
 function showWeatherInformation(response) {
   let cityElement = document.querySelector("#current-city");
@@ -30,10 +37,8 @@ function showWeatherInformation(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-  celsius = response.data.main.temp;
-
   cityElement.innerHTML = response.data.name;
-  tempElement.innerHTML = Math.round(celsius);
+  tempElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
@@ -57,31 +62,8 @@ function submitting(event) {
   searchCity(cityInput.value);
 }
 
-function displayFahrneheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsius * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-function displaycelsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temperature");
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsius);
-}
-
-let celsius = null;
-
 let submitCity = document.querySelector("#search-form");
 submitCity.addEventListener("submit", submitting);
 
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrneheitTemp);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displaycelsiusTemp);
-
 searchCity("london");
+displayForcast();

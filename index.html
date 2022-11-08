@@ -39,47 +39,60 @@
             </div>
           </div>
         </form>
-        <div class="body"></div>
         <div class="weather-information">
           <div class="row">
             <div class="col-6">
               <h1 id="current-city"></h1>
               <ul>
-                <li id="date"></li>
-                <span id="description"></span>
+                <span>last Updated:</span>
+                <li id="date">Friday 05:00</li>
                 <li>
                   humidity: <span id="humidity"></span
                   ><span class="parameter">%</span>, wind:
                   <span id="wind-speed"></span>
                   <span class="parameter">km/h</span>
+                  <span id="description"></span>
                 </li>
               </ul>
             </div>
             <div class="col-6" id="temp-icon">
               <img src="" id="icon" />
               <span id="current-temperature"></span>
-              <span class="units">
-                <a href="#" id="celsius" class="active"
-                  >°C<span id="units-divider"> | </span>
-                </a>
-                <a href="#" id="fahrenheit">°F</a>
-              </span>
+              <span class="units"> °C </span>
             </div>
           </div>
         </div>
-        <p>
-          This project was coded by rila and is
-          <a href="https://github.com/rila84/weather" class="footer-link"
-            >open-sourced on GitHub</a
-          >
-          and
-          <a
-            href="https://effervescent-sunburst-b302c3.netlify.app/"
-            class="footer-link"
-          >
-            hosted on Netlify</a
-          >
-        </p>
+        <div class="forcast" id="forcast">
+          <div class="row">
+            <div class="col-2">
+              <span class="day">thu</span>
+              <img
+                src="https://www.vecteezy.com/vector-art/583443-cloud-and-rain-icon-vector"
+                width="50px"
+                id="forcast-icon"
+              />
+              <div class="min-max-degree">
+                <span id="max">18°</span>
+                <span id="min">12°</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <p>
+            This project was coded by rila and is
+            <a href="https://github.com/rila84/weather" class="footer-link"
+              >open-sourced on GitHub</a
+            >
+            and
+            <a
+              href="https://effervescent-sunburst-b302c3.netlify.app"
+              class="footer-link"
+            >
+              hosted on Netlify</a
+            >
+          </p>
+        </div>
       </div>
     </div>
     <script src="src/app.js"></script>
