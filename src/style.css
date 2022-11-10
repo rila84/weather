@@ -35,9 +35,13 @@
   display: block;
 }
 
+#forcast-min {
+  opacity: 0.5;
+}
+
 .container {
   width: 45%;
-  height: 500px;
+  height: 600px;
   margin: 50px auto;
   padding: 50px 40px;
   border: 1px solid gainsboro;
@@ -76,20 +80,27 @@
   font-size: 14px;
   color: whitesmoke;
   padding-top: 25px;
-  position: fixed;
 }
 .footer-link {
   text-decoration: none;
   color: #68e1fd;
 }
-.col-2 {
+.forcast {
   color: whitesmoke;
-  padding-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid yellow;
+  height: 150px;
+}
+.forecast-day {
+  font-size: 16px;
+  opacity: 0.5;
 }
 
-ul {
-  padding: 0 0 40px 0;
+.forcast-degrees {
+  font-size: 13px;
 }
+
 li {
   list-style: none;
   color: whitesmoke;

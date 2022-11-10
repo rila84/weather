@@ -20,12 +20,49 @@ function date(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}: ${minutes}`;
 }
-function displayForcast() {
-  document.querySelector("#forcast");
-  forcast.innerHTML = "forcast;";
+function forcastDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Wed", "Thur", "Fri", "Sat", "Sun", "Mon", "Thus"];
+  return days[date.getDay()];
+}
 
-  let day = ["Wed", "Thur", "Fri", "Sat", "Sun", "Mon"];
-  day.forEach(function () {});
+function displayForcast(response) {
+  let forcast = response.data.daily;
+  let forcastElement = document.querySelector("#forcast");
+
+  let forcastHTML = ` <div class="row">`;
+  forcast.forEach(function (forcastDay, index) {
+    if (index < 6) {
+      forcastHTML =
+        forcastHTML +
+        `<div class="col-2">
+              <span class="forcast-day">${forcastDate(forcastDay.dt)}</span>
+              <img
+                src="http://openweathermap.org/img/wn/${
+                  forcastDay.weather[0].icon
+                }@2x.png"
+                width="50px"
+                id="forcast-icon"
+              />
+              <div class="forcast-degrees">
+                <span id="forcast-max">${Math.round(
+                  forcastDay.temp.max
+                )}°</span>
+                <span id="forcast-min">${Math.round(
+                  forcastDay.temp.min
+                )}°</span>
+              </div>
+            </div>`;
+    }
+  });
+  forcastHTML = forcastHTML + `</div>`;
+  forcastElement.innerHTML = forcastHTML;
+}
+
+function forcastWeather(coordinates) {
+  let apiKey = "5d9235a86e48ae6996d42d29c5604b9e";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForcast);
 }
 
 function showWeatherInformation(response) {
@@ -48,6 +85,7 @@ function showWeatherInformation(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
+  forcastWeather(response.data.coord);
 }
 
 function searchCity(city) {
@@ -66,4 +104,3 @@ let submitCity = document.querySelector("#search-form");
 submitCity.addEventListener("submit", submitting);
 
 searchCity("london");
-displayForcast();
