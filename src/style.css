@@ -1,10 +1,14 @@
 #current-city {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 600;
   color: whitesmoke;
+  padding-left: 27px;
 }
 #search-form {
-  margin-bottom: 40px;
+  margin-bottom: 70px;
+}
+#temp-icon {
+  padding-left: 40px;
 }
 #icon {
   margin-left: 30px;
@@ -21,6 +25,7 @@
 #humidity,
 #wind-speed {
   color: #ffbc0e;
+  font-weight: bold;
 }
 #date {
   display: inline;
@@ -47,23 +52,29 @@
   border: 1px solid gainsboro;
   border-radius: 5px;
   font-family: "Familjen Grotesk", sans-serif;
-  background-color: rgb(37, 37, 98);
+  background: linear-gradient(
+    120deg,
+    rgb(4, 29, 55) 10%,
+    rgb(6, 50, 97) 20%,
+    rgb(28, 133, 243) 50%
+  );
 }
+
 .col-6 {
   line-height: 1.5;
 }
 .col-9 input {
-  background-color: #68e1fd;
+  background-color: whitesmoke;
 }
 .search-btn {
-  background-color: #ffbc0e;
+  background-color: #68e1fd;
   color: #252562;
   border: none;
   border-radius: 5px;
   padding: 7px 20px;
   width: 110px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .parameter {
@@ -77,19 +88,19 @@
   color: #68e1fd;
 }
 .footer {
+  text-align: center;
   font-size: 14px;
-  color: whitesmoke;
-  padding-top: 25px;
+  color: #0a0a3a;
+  padding-top: 35px;
 }
 .footer-link {
   text-decoration: none;
-  color: #68e1fd;
+  color: whitesmoke;
 }
 .forcast {
   color: whitesmoke;
   margin-top: 20px;
   text-align: center;
-  border: 1px solid yellow;
   height: 150px;
 }
 .forecast-day {
