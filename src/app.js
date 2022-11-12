@@ -21,7 +21,7 @@ function date(timestamp) {
   return `${day} ${hours}: ${minutes}`;
 }
 function forcastDate(timestamp) {
-  let date = new Date(timestamp * 1000);
+  let date = new Date(timestamp);
   let days = ["Wed", "Thur", "Fri", "Sat", "Sun", "Mon", "Thus"];
   return days[date.getDay()];
 }
@@ -35,7 +35,9 @@ function displayForcast(response) {
       forcastHTML =
         forcastHTML +
         `<div class="col-2">
-              <span class="forcast-day">${forcastDate(forcastDay.dt)}</span>
+              <span class="forcast-day">${forcastDate(
+                forcastDay.dt * 1000
+              )}</span>
               <img
                 src="http://openweathermap.org/img/wn/${
                   forcastDay.weather[0].icon
@@ -59,7 +61,7 @@ function displayForcast(response) {
 }
 
 function forcastWeather(coordinates) {
-  let apiKey = "d9235a86e48ae6996d42d29c5604b9e";
+  let apiKey = "ab8e7ef210556986d1c9a75d6007b825";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForcast);
 }

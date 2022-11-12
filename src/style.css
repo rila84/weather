@@ -24,7 +24,7 @@
 
 #humidity,
 #wind-speed {
-  color: #ffbc0e;
+  color: #ec6e4c;
   font-weight: bold;
 }
 #date {
@@ -41,7 +41,7 @@
 }
 
 #forcast-min {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .container {
@@ -91,7 +91,7 @@
   text-align: center;
   font-size: 14px;
   color: #0a0a3a;
-  padding-top: 35px;
+  padding-top: 30px;
 }
 .footer-link {
   text-decoration: none;
@@ -99,17 +99,16 @@
 }
 .forcast {
   color: whitesmoke;
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: center;
   height: 150px;
 }
-.forecast-day {
+.forcast-day {
   font-size: 16px;
-  opacity: 0.5;
 }
 
 .forcast-degrees {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 li {
