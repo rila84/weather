@@ -75,6 +75,8 @@ function showWeatherInformation(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
+  let celsiusTemp = Math.round(response.data.main.temp);
+
   cityElement.innerHTML = response.data.name;
   tempElement.innerHTML = Math.round(response.data.main.temp);
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -87,6 +89,24 @@ function showWeatherInformation(response) {
   );
   icon.setAttribute("alt", response.data.weather[0].description);
   forcastWeather(response.data.coord);
+
+  function displayFahrenheit(event) {
+    event.preventDefault();
+    celsius.classList.remove("active");
+    fahrenheit.classList.add("active");
+    tempElement.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
+  }
+  let fahrenheit = document.querySelector("#fahrenheit");
+  fahrenheit.addEventListener("click", displayFahrenheit);
+
+  function displayCelsius(event) {
+    event.preventDefault();
+    fahrenheit.classList.remove("active");
+    celsius.classList.add("active");
+    tempElement.innerHTML = celsiusTemp;
+  }
+  let celsius = document.querySelector("#celsius");
+  celsius.addEventListener("click", displayCelsius);
 }
 
 function searchCity(city) {
